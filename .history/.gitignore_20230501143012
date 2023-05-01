@@ -18,6 +18,3 @@ package-lock.json
 
 # Intellij Configuration Files
 .idea/
-
-*.hitsory
-*.github

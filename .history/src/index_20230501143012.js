@@ -1,13 +1,13 @@
-import gql from "graphql-tag";
-import { readFileSync } from "fs";
-import { ApolloServer } from "@apollo/server";
-import { buildSubgraphSchema } from "@apollo/subgraph";
-import { startStandaloneServer } from "@apollo/server/standalone";
-import { GraphQLError } from "graphql";
-import resolvers from "./resolvers";
+const gql = require("graphql-tag");
+const { readFileSync } = require("fs");
+const { ApolloServer } = require("@apollo/server");
+const { buildSubgraphSchema } = require("@apollo/subgraph");
+const { startStandaloneServer } = require("@apollo/server/standalone");
+const { GraphQLError } = require("graphql");
+const resolvers = require("./resolvers");
 
 const port = process.env.PORT ?? 4001;
-import { name as subgraphName } from "../package.json";
+const subgraphName = require("../package.json").name;
 const routerSecret = process.env.ROUTER_SECRET;
 
 async function main() {
